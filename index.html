@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#faf3e6">
+  <title>Gold Talent — گالری هنری روشا</title>
+
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+
+  <style>
+    /* =========================================================
+       استایل هماهنگ با تم ۱ سایت (Neo Editorial)
+       کرم + سبز + طلایی
+       ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      font-size: 10px;
+    }
+
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: #faf3e6;
+      color: #154726;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.6rem;
+      direction: rtl;
+      line-height: 1.7;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(254, 178, 145, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 213, 80, 0.15) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .wrap {
+      max-width: 480px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.4rem;
+      text-align: center;
+    }
+
+    /* ===== لوگو/تیتر ===== */
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .brand-icon {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #ffcaa6 0%, #feb291 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      box-shadow:
+        inset 0 3px 0 rgba(255, 255, 255, 0.7),
+        0 6px 0 #d88a5e,
+        0 12px 24px -6px rgba(21, 71, 38, 0.25),
+        0 0 40px rgba(254, 178, 145, 0.5);
+      animation: brandPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes brandPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow:
+          inset 0 3px 0 rgba(255, 255, 255, 0.7),
+          0 6px 0 #d88a5e,
+          0 12px 24px -6px rgba(21, 71, 38, 0.25),
+          0 0 40px rgba(254, 178, 145, 0.5);
+      }
+      50% {
+        transform: scale(1.04);
+        box-shadow:
+          inset 0 3px 0 rgba(255, 255, 255, 0.7),
+          0 6px 0 #d88a5e,
+          0 12px 24px -6px rgba(21, 71, 38, 0.35),
+          0 0 60px rgba(254, 178, 145, 0.7);
+      }
+    }
+
+    .brand-title {
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: clamp(3.2rem, 9vw, 4.4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #154726;
+      text-shadow:
+        0 1px 0 #ffffff,
+        0 2px 0 #f5e8d4,
+        0 4px 12px rgba(21, 71, 38, 0.15);
+      direction: ltr;
+    }
+
+    .brand-title .gold {
+      color: #c8862a;
+    }
+
+    /* ===== دکمه ورود ===== */
+    .enter-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 2.2rem 2rem;
+      background: linear-gradient(180deg, #1a5a30 0%, #154726 50%, #0d2e18 100%);
+      color: #faf3e6;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 1.4rem;
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.25),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.2),
+        0 6px 0 #0a2414,
+        0 12px 24px -4px rgba(21, 71, 38, 0.4),
+        0 0 30px rgba(151, 199, 75, 0.3);
+      transition: all 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+      transform: translateY(0);
+      letter-spacing: 0.01em;
+    }
+
+    .enter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.3),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.2),
+        0 8px 0 #0a2414,
+        0 16px 32px -4px rgba(21, 71, 38, 0.5),
+        0 0 50px rgba(151, 199, 75, 0.5);
+    }
+
+    .enter-btn:active {
+      transform: translateY(4px);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.25),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.2),
+        0 2px 0 #0a2414,
+        0 4px 8px rgba(21, 71, 38, 0.3);
+    }
+
+    .enter-btn .icon {
+      font-size: 1.15em;
+      line-height: 1;
+    }
+
+    /* ===== کادر راهنما ===== */
+    .hint-box {
+      width: 100%;
+      padding: 2rem 1.8rem;
+      background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(250, 243, 230, 0.7) 100%
+      );
+      backdrop-filter: blur(12px) saturate(140%);
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+      border: 2px solid rgba(255, 255, 255, 0.95);
+      border-radius: 1.6rem;
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 1),
+        0 6px 0 #f0d5b8,
+        0 14px 28px -8px rgba(21, 71, 38, 0.15);
+      text-align: right;
+    }
+
+    .hint-title {
+      font-size: clamp(1.5rem, 3.5vw, 1.7rem);
+      font-weight: 800;
+      color: #6b1212;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hint-text {
+      font-size: clamp(1.4rem, 3vw, 1.5rem);
+      font-weight: 500;
+      line-height: 1.9;
+      color: #154726;
+      opacity: 0.9;
+      margin-bottom: 1.6rem;
+    }
+
+    /* ===== کادر آدرس + کپی ===== */
+    .url-row {
+      display: flex;
+      align-items: stretch;
+      gap: 0.8rem;
+      width: 100%;
+    }
+
+    .url-text {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.4rem 1rem;
+      background: #154726;
+      color: #faf3e6;
+      border-radius: 1rem;
+      font-family: 'Courier New', monospace;
+      font-size: clamp(1.4rem, 3.8vw, 1.7rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      direction: ltr;
+      user-select: all;
+      word-break: break-all;
+      min-height: 5.2rem;
+      box-shadow:
+        inset 0 2px 0 rgba(0, 0, 0, 0.3),
+        inset 0 -2px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .copy-btn {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1.6rem;
+      background: linear-gradient(180deg, #ffcaa6 0%, #feb291 100%);
+      color: #154726;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      border-radius: 1rem;
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.7),
+        0 4px 0 #d88a5e,
+        0 8px 16px -4px rgba(21, 71, 38, 0.2);
+      min-width: 8rem;
+    }
+
+    .copy-btn:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.7),
+        0 6px 0 #d88a5e,
+        0 12px 20px -4px rgba(21, 71, 38, 0.25);
+    }
+
+    .copy-btn:active {
+      transform: translateY(2px);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.7),
+        0 2px 0 #d88a5e,
+        0 4px 8px rgba(21, 71, 38, 0.2);
+    }
+
+    .copy-btn.copied {
+      background: linear-gradient(180deg, #b8e08e 0%, #97c74b 100%);
+      color: #ffffff;
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.4),
+        0 4px 0 #4d7a1f,
+        0 8px 16px -4px rgba(21, 71, 38, 0.2);
+    }
+
+    /* ===== پاورقی ===== */
+    .footer-note {
+      width: 100%;
+      padding: 1.6rem 1.4rem;
+      background: rgba(255, 213, 80, 0.25);
+      border: 2px dashed #d4a500;
+      border-radius: 1.2rem;
+      font-size: clamp(1.3rem, 3vw, 1.5rem);
+      font-weight: 600;
+      line-height: 1.9;
+      color: #6b1212;
+      text-align: center;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    .footer-note .lock {
+      font-size: 1.6rem;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 400px) {
+      html { font-size: 9px; }
+
+      .url-row {
+        flex-direction: column;
+      }
+
+      .copy-btn {
+        padding: 1.4rem 1rem;
+        min-height: 5rem;
+      }
+    }
+
+    /* ===== Toast ===== */
+    .toast {
+      position: fixed;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(2rem);
+      background: #154726;
+      color: #faf3e6;
+      padding: 1.4rem 2.4rem;
+      border-radius: 1.2rem;
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      box-shadow:
+        0 8px 24px rgba(21, 71, 38, 0.4),
+        0 0 0 2px rgba(255, 213, 80, 0.6);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+      z-index: 9999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- ===== لوگو / تیتر ===== -->
+    <div class="brand">
+      <div class="brand-icon">🎨</div>
+      <h1 class="brand-title">
+        <span class="gold">Gold</span> Talent
+      </h1>
+    </div>
+
+    <!-- ===== دکمه ورود ===== -->
+    <a href="#" class="enter-btn" id="enterBtn">
+      <span class="icon">🚪</span>
+      <span>ورود به سایت</span>
+    </a>
+
+    <!-- ===== کادر راهنما + آدرس ===== -->
+    <div class="hint-box">
+
+      <div class="hint-title">
+        <span>⚠️</span>
+        <span>سایت در اینستاگرام باز نمی‌شود</span>
+      </div>
+
+      <div class="hint-text">
+        لطفاً آدرس زیر را کپی کنید و در مرورگر خود
+        (<strong>Chrome</strong> یا <strong>Safari</strong>) باز کنید:
+      </div>
+
+      <div class="url-row">
+        <div class="url-text" id="urlText">rosha-24.ir/x7q</div>
+        <button type="button" class="copy-btn" id="copyBtn">
+          📋 کپی
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ===== پاورقی ===== -->
+    <div class="footer-note">
+      <span class="lock">🔒</span>
+      <span>
+        سایت دارای نماد اعتماد الکترونیک است،
+        بنابراین بهتر است فیلترشکن خود را خاموش کنید.
+      </span>
+    </div>
+
+  </div>
+
+  <!-- ===== Toast ===== -->
+  <div class="toast" id="toast">✅ آدرس کپی شد</div>
+
+  <script>
+  (function () {
+    'use strict';
+
+    // ===== آدرس مقصد =====
+    var SITE_URL = 'https://rosha-24.ir/x7q';
+    var URL_TEXT = 'rosha-24.ir/x7q';
+
+    // ===== دکمه ورود — هوشمند برای iOS/Android/Desktop =====
+    var enterBtn = document.getElementById('enterBtn');
+    var ua = navigator.userAgent || '';
+
+    var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+    var isAndroid = /android/i.test(ua);
+
+    var targetUrl;
+
+    if (isIOS) {
+      // آیفون → Safari
+      targetUrl = 'x-safari-' + SITE_URL;
+    } else if (isAndroid) {
+      // اندروید → intent برای خروج از مرورگر داخلی اینستاگرام
+      targetUrl = 'intent://rosha-24.ir/x7q#Intent;scheme=https;end';
+    } else {
+      // دسکتاپ → لینک معمولی
+      targetUrl = SITE_URL;
+    }
+
+    enterBtn.setAttribute('href', targetUrl);
+
+    // ===== دکمه کپی =====
+    var copyBtn = document.getElementById('copyBtn');
+    var toast = document.getElementById('toast');
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(function () {
+        toast.classList.remove('show');
+      }, 1800);
+    }
+
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast('✅ آدرس کپی شد');
+      } catch (e) {
+        showToast('❌ خطا در کپی، دستی انتخاب کن');
+      }
+      document.body.removeChild(ta);
+    }
+
+    copyBtn.addEventListener('click', function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(URL_TEXT).then(function () {
+          showToast('✅ آدرس کپی شد');
+          copyBtn.classList.add('copied');
+          copyBtn.textContent = '✅ کپی شد';
+          setTimeout(function () {
+            copyBtn.classList.remove('copied');
+            copyBtn.textContent = '📋 کپی';
+          }, 1800);
+        }).catch(function () {
+          fallbackCopy(URL_TEXT);
+        });
+      } else {
+        fallbackCopy(URL_TEXT);
+      }
+    });
+
+  })();
+  </script>
+
+</body>
+    </html>
