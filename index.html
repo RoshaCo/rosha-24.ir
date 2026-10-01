@@ -3,33 +3,49 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width,
-             initial-scale=1,
-             maximum-scale=1,
-             user-scalable=no,
-             viewport-fit=cover"
-  >
+  <meta name="viewport"
+        content="width=device-width,
+                 initial-scale=1,
+                 maximum-scale=1,
+                 user-scalable=no,
+                 viewport-fit=cover">
 
-  <meta name="theme-color" content="#f8f1e6">
+  <meta name="theme-color" content="#f7f8fc">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
 
-  <title>ورود به گالری هنری روشا</title>
+  <title>ورود به سایت | گالری هنری روشا</title>
 
   <link rel="icon" href="data:,">
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
-  >
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 
   <style>
+
     /* =========================================================
-       ROSHA 24 — Instagram Gateway Landing
-       بدون اسکرول | Mobile Safe Area | سبک و سریع
+       ROSHA GATEWAY
+       Premium Mobile Landing
+       No Scroll / Safe Area / Responsive
        ========================================================= */
+
+    :root {
+      --bg: #f7f8fc;
+      --ink: #141a27;
+      --muted: #687286;
+      --blue: #315efb;
+      --blue-dark: #2046c7;
+      --gold: #d99a32;
+      --line: #e7eaf1;
+      --white: #ffffff;
+
+      --safe-top: env(safe-area-inset-top);
+      --safe-bottom: env(safe-area-inset-bottom);
+      --safe-left: env(safe-area-inset-left);
+      --safe-right: env(safe-area-inset-right);
+    }
 
     * {
       margin: 0;
@@ -38,304 +54,436 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    html {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #f8f1e6;
-    }
-
+    html,
     body {
       width: 100%;
       height: 100%;
-      min-height: 100dvh;
       overflow: hidden;
+    }
 
-      font-family: "Vazirmatn", Tahoma, sans-serif;
+    body {
+      min-height: 100dvh;
+
+      font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+      color: var(--ink);
 
       background:
         radial-gradient(
-          circle at 10% 8%,
-          rgba(244, 190, 104, 0.25),
-          transparent 32%
+          circle at 100% 0%,
+          rgba(49,94,251,.11),
+          transparent 34%
         ),
         radial-gradient(
-          circle at 92% 92%,
-          rgba(199, 139, 48, 0.16),
-          transparent 35%
+          circle at 0% 100%,
+          rgba(217,154,50,.10),
+          transparent 31%
         ),
-        linear-gradient(
-          145deg,
-          #fffaf2 0%,
-          #f8f1e6 52%,
-          #f3e8d7 100%
-        );
-
-      color: #183d29;
+        #f7f8fc;
 
       position: fixed;
       inset: 0;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      overflow: hidden;
 
       padding:
-        max(12px, env(safe-area-inset-top))
-        max(12px, env(safe-area-inset-right))
-        max(12px, env(safe-area-inset-bottom))
-        max(12px, env(safe-area-inset-left));
+        max(12px, var(--safe-top))
+        max(12px, var(--safe-right))
+        max(12px, var(--safe-bottom))
+        max(12px, var(--safe-left));
 
       -webkit-user-select: none;
       user-select: none;
     }
 
+
     /* =========================================================
-       پس‌زمینه‌های بسیار سبک
+       BACKGROUND DETAILS
        ========================================================= */
 
-    body::before,
-    body::after {
-      content: "";
+    .ambient {
       position: fixed;
       pointer-events: none;
+      z-index: 0;
       border-radius: 50%;
-      filter: blur(1px);
     }
 
-    body::before {
+    .ambient.one {
       width: 180px;
       height: 180px;
-      top: -90px;
-      left: -70px;
-      background: rgba(210, 160, 67, 0.14);
+
+      top: -110px;
+      right: -80px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(49,94,251,.14),
+          transparent 70%
+        );
     }
 
-    body::after {
-      width: 220px;
-      height: 220px;
-      bottom: -130px;
-      right: -100px;
-      background: rgba(30, 91, 55, 0.08);
+    .ambient.two {
+      width: 230px;
+      height: 230px;
+
+      bottom: -150px;
+      left: -100px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(217,154,50,.12),
+          transparent 70%
+        );
     }
+
 
     /* =========================================================
-       قاب اصلی
+       MAIN STAGE
        ========================================================= */
 
-    .page {
-      width: min(100%, 480px);
-
+    .stage {
+      width: min(100%, 430px);
       height: 100%;
-      max-height: 760px;
+
+      margin: 0 auto;
 
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      align-items: stretch;
-
-      gap: clamp(8px, 1.7vh, 16px);
 
       position: relative;
       z-index: 2;
     }
 
-    /* =========================================================
-       برند
-       ========================================================= */
 
-    .brand {
-      text-align: center;
-      flex-shrink: 1;
-    }
-
-    .brand-mark {
-      width: clamp(42px, 8.5vh, 66px);
-      height: clamp(42px, 8.5vh, 66px);
-
-      margin: 0 auto clamp(4px, 1vh, 9px);
-
-      border-radius: 50%;
+    .content {
+      width: 100%;
 
       display: flex;
+      flex-direction: column;
+
+      gap: clamp(
+        10px,
+        2.1dvh,
+        18px
+      );
+    }
+
+
+    /* =========================================================
+       TOP BRAND
+       ========================================================= */
+
+    .top {
+      text-align: center;
+    }
+
+    .mini-brand {
+      display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
-      font-size: clamp(21px, 4.5vh, 32px);
-
-      background:
-        linear-gradient(
-          145deg,
-          #fff4ce,
-          #e5bd69
-        );
-
-      border: 2px solid rgba(255,255,255,.95);
-
-      box-shadow:
-        0 5px 14px rgba(72, 52, 19, .13),
-        inset 0 2px 3px rgba(255,255,255,.9);
-
-      animation: softFloat 4s ease-in-out infinite;
-    }
-
-    @keyframes softFloat {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-3px);
-      }
-    }
-
-    .brand-name {
-      font-size: clamp(21px, 4.8vw, 30px);
-      font-weight: 900;
-      line-height: 1.05;
-      color: #174a2d;
-      letter-spacing: -.5px;
-    }
-
-    .brand-name span {
-      color: #b77b20;
-    }
-
-    .brand-sub {
-      margin-top: 3px;
-      font-size: clamp(10px, 2.5vw, 13px);
-      font-weight: 600;
-      color: #876d4c;
-    }
-
-    /* =========================================================
-       کارت راهنما
-       ========================================================= */
-
-    .guide {
-      width: 100%;
+      gap: 7px;
 
       padding:
-        clamp(12px, 2.2vh, 19px)
-        clamp(13px, 3.5vw, 20px);
+        7px 12px;
 
-      border-radius: 20px;
+      border-radius: 999px;
 
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.94),
-          rgba(255,250,242,.83)
-        );
+      background: rgba(255,255,255,.72);
 
       border: 1px solid rgba(255,255,255,.95);
 
+      color: #5e6676;
+
+      font-size:
+        clamp(10px, 2.7vw, 13px);
+
+      font-weight: 700;
+
       box-shadow:
-        0 10px 28px rgba(53, 47, 32, .10),
-        inset 0 1px 0 rgba(255,255,255,.95);
-
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-
-      text-align: right;
-
-      flex-shrink: 1;
+        0 6px 20px rgba(31,44,70,.05);
     }
 
-    .guide-label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-
-      color: #9a681d;
-
-      font-size: clamp(13px, 3.2vw, 16px);
-      font-weight: 800;
-
-      margin-bottom: clamp(7px, 1.4vh, 11px);
-    }
-
-    .guide-label::before {
-      content: "";
+    .mini-dot {
       width: 7px;
       height: 7px;
+
       border-radius: 50%;
-      background: #c18a2b;
-      box-shadow: 0 0 0 5px rgba(193,138,43,.10);
-      flex-shrink: 0;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 0 4px rgba(217,154,50,.10);
     }
 
-    .guide-text {
-      font-size: clamp(14px, 3.7vw, 18px);
-      font-weight: 600;
-      line-height: 1.75;
-
-      color: #234a34;
-    }
-
-    .guide-text strong {
-      color: #a86d16;
-      font-weight: 900;
-    }
 
     /* =========================================================
-       دکمه ورود
+       HERO
        ========================================================= */
 
-    .enter-btn {
-      width: 100%;
-      min-height: clamp(58px, 9vh, 76px);
+    .hero {
+      text-align: center;
+
+      padding:
+        2px 8px 0;
+    }
+
+    .hero h1 {
+      color: #121a2a;
+
+      font-size:
+        clamp(
+          26px,
+          7.4vw,
+          38px
+        );
+
+      line-height: 1.22;
+
+      font-weight: 950;
+
+      letter-spacing: -.9px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero p {
+      margin-top: 7px;
+
+      color: var(--muted);
+
+      font-size:
+        clamp(
+          11px,
+          3.1vw,
+          14px
+        );
+
+      line-height: 1.65;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       MAIN GUIDE CARD
+       ========================================================= */
+
+    .guide-card {
+      position: relative;
+
+      padding:
+        clamp(17px, 4vw, 23px);
+
+      border-radius: 25px;
+
+      background:
+        rgba(255,255,255,.91);
+
+      border:
+        1px solid rgba(255,255,255,.95);
+
+      box-shadow:
+        0 18px 50px rgba(31,44,70,.09),
+        0 2px 7px rgba(31,44,70,.035);
+
+      overflow: hidden;
+    }
+
+    .guide-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 95px;
+      height: 95px;
+
+      top: -48px;
+      left: -42px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(49,94,251,.07);
+    }
+
+
+    /* =========================================================
+       STEP
+       ========================================================= */
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+
+      gap: 12px;
+    }
+
+    .step-number {
+      flex: 0 0 32px;
+
+      width: 32px;
+      height: 32px;
 
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+
+      border-radius: 11px;
+
+      background:
+        #eef2ff;
+
+      color:
+        var(--blue);
+
+      font-size: 14px;
+
+      font-weight: 950;
+    }
+
+    .step-content {
+      min-width: 0;
+    }
+
+    .step-title {
+      color: #1a2130;
+
+      font-size:
+        clamp(
+          14px,
+          3.7vw,
+          17px
+        );
+
+      line-height: 1.4;
+
+      font-weight: 900;
+    }
+
+    .step-text {
+      margin-top: 5px;
+
+      color: #596477;
+
+      font-size:
+        clamp(
+          13px,
+          3.55vw,
+          16px
+        );
+
+      line-height: 1.78;
+
+      font-weight: 600;
+    }
+
+    .step-text strong {
+      color: #b47619;
+      font-weight: 950;
+    }
+
+
+    /* =========================================================
+       DIVIDER
+       ========================================================= */
+
+    .divider {
+      height: 1px;
+
+      margin:
+        clamp(12px, 2.5vh, 17px)
+        0;
+
+      background:
+        var(--line);
+    }
+
+
+    /* =========================================================
+       CTA
+       ========================================================= */
+
+    .cta-wrap {
+      position: relative;
+    }
+
+    .cta-btn {
+      width: 100%;
+
+      min-height:
+        clamp(
+          60px,
+          9.5vh,
+          72px
+        );
+
+      border: 0;
 
       border-radius: 18px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      color: #ffffff;
 
       background:
         linear-gradient(
           135deg,
-          #a92f31 0%,
-          #c4433e 50%,
-          #932629 100%
+          #3f6df7,
+          #294fd6
         );
-
-      color: #fff;
-
-      border: 1px solid rgba(255,255,255,.55);
 
       text-decoration: none;
 
-      font-size: clamp(19px, 5vw, 25px);
-      font-weight: 900;
+      font-size:
+        clamp(
+          19px,
+          5.1vw,
+          24px
+        );
+
+      font-weight: 950;
 
       box-shadow:
-        0 5px 0 #68191b,
-        0 12px 26px rgba(139,37,39,.23),
+        0 9px 25px rgba(49,94,251,.25),
         inset 0 1px 0 rgba(255,255,255,.30);
 
       position: relative;
+
       overflow: hidden;
 
       transition:
-        transform .15s ease,
-        box-shadow .15s ease;
-
-      flex-shrink: 0;
+        transform .16s ease,
+        box-shadow .16s ease;
     }
 
-    /* درخشش خیلی سبک */
-
-    .enter-btn::after {
+    .cta-btn::after {
       content: "";
+
       position: absolute;
 
       top: 0;
       bottom: 0;
-      right: -80%;
 
-      width: 45%;
+      width: 35%;
+
+      right: -55%;
+
+      transform: skewX(-18deg);
 
       background:
         linear-gradient(
@@ -345,122 +493,188 @@
           transparent
         );
 
-      transform: skewX(-18deg);
-
-      animation: shine 4s ease-in-out infinite;
+      animation:
+        ctaShine 4.8s ease-in-out infinite;
     }
 
-    @keyframes shine {
-      0%, 65% {
-        right: -80%;
+    @keyframes ctaShine {
+
+      0%,
+      60% {
+        right: -55%;
       }
 
-      85%, 100% {
-        right: 130%;
+      78%,
+      100% {
+        right: 125%;
       }
+
     }
 
-    .enter-btn:active {
-      transform: translateY(4px);
+    .cta-btn:active {
+      transform:
+        scale(.985);
 
       box-shadow:
-        0 1px 0 #68191b,
-        0 5px 12px rgba(139,37,39,.20),
-        inset 0 1px 0 rgba(255,255,255,.20);
+        0 5px 15px rgba(49,94,251,.20);
     }
 
-    .enter-icon {
-      font-size: 1.05em;
-      line-height: 1;
-      position: relative;
-      z-index: 2;
-    }
-
-    .enter-label {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* =========================================================
-       آدرس سایت
-       ========================================================= */
-
-    .url-section {
-      width: 100%;
-
-      display: flex;
-      align-items: stretch;
-      gap: 8px;
-
-      direction: ltr;
-
-      flex-shrink: 0;
-    }
-
-    .url-box {
-      flex: 1;
-      min-width: 0;
-
-      min-height: clamp(49px, 7vh, 60px);
+    .cta-arrow {
+      width: 31px;
+      height: 31px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      padding: 8px;
+      border-radius: 50%;
+
+      background:
+        rgba(255,255,255,.16);
+
+      font-size: 18px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-label {
+      position: relative;
+      z-index: 2;
+    }
+
+
+    /* =========================================================
+       URL AREA
+       ========================================================= */
+
+    .url-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-bottom: 7px;
+    }
+
+    .url-title span:first-child {
+      color: #333d50;
+
+      font-size:
+        clamp(
+          11px,
+          3vw,
+          14px
+        );
+
+      font-weight: 850;
+    }
+
+    .url-title span:last-child {
+      color: #8a93a2;
+
+      font-size:
+        clamp(
+          9px,
+          2.5vw,
+          11px
+        );
+
+      font-weight: 650;
+    }
+
+    .url-row {
+      display: flex;
+
+      gap: 7px;
+
+      direction: ltr;
+    }
+
+    .url-box {
+      min-width: 0;
+      flex: 1;
+
+      min-height: 51px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        8px 10px;
 
       border-radius: 14px;
 
-      background: #173e2a;
+      border:
+        1px solid #e3e7ef;
 
-      color: #f6d37b;
+      background:
+        #f8f9fc;
 
-      border: 1px solid rgba(255,255,255,.16);
+      color:
+        #2b55c9;
 
-      font-family: "Courier New", monospace;
-      font-size: clamp(13px, 3.6vw, 18px);
+      font-family:
+        "Courier New",
+        monospace;
+
+      font-size:
+        clamp(
+          11px,
+          3.1vw,
+          15px
+        );
+
       font-weight: 800;
-
-      letter-spacing: .2px;
-
-      white-space: nowrap;
-      overflow: hidden;
 
       direction: ltr;
 
+      white-space: nowrap;
+
+      overflow: hidden;
+
       box-shadow:
-        0 5px 15px rgba(20,60,40,.15),
-        inset 0 1px 0 rgba(255,255,255,.08);
+        inset 0 1px 2px rgba(25,35,55,.025);
     }
 
     .copy-btn {
-      flex: 0 0 clamp(82px, 23vw, 112px);
+      flex:
+        0 0
+        clamp(
+          86px,
+          24vw,
+          108px
+        );
 
-      min-height: clamp(49px, 7vh, 60px);
+      min-height: 51px;
 
       border: 0;
+
       border-radius: 14px;
 
       background:
-        linear-gradient(
-          145deg,
-          #e8c36d,
-          #c99331
+        #151d2d;
+
+      color: #ffffff;
+
+      font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+      font-size:
+        clamp(
+          11px,
+          3.1vw,
+          14px
         );
 
-      color: #183d29;
-
-      font-family: "Vazirmatn", Tahoma, sans-serif;
-
-      font-size: clamp(13px, 3.5vw, 17px);
       font-weight: 900;
 
       cursor: pointer;
 
       box-shadow:
-        0 4px 0 #9a6b20,
-        0 8px 16px rgba(91,65,22,.16),
-        inset 0 1px 0 rgba(255,255,255,.65);
+        0 7px 17px rgba(21,29,45,.14);
 
       transition:
         transform .15s ease,
@@ -468,178 +682,209 @@
     }
 
     .copy-btn:active {
-      transform: translateY(3px);
-      box-shadow:
-        0 1px 0 #9a6b20,
-        0 4px 8px rgba(91,65,22,.12);
+      transform:
+        scale(.97);
     }
 
     .copy-btn.copied {
-      background: #4f8b5b;
-      color: #fff;
-      box-shadow:
-        0 4px 0 #35633e,
-        0 8px 16px rgba(53,99,62,.16);
+      background:
+        #2f9668;
     }
 
+
     /* =========================================================
-       متن کوتاه پایین
+       MICRO TRUST / FOOTER
        ========================================================= */
 
-    .bottom-note {
+    .trust {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 7px;
+
+      color: #7c8697;
+
       text-align: center;
 
-      font-size: clamp(10px, 2.7vw, 13px);
+      font-size:
+        clamp(
+          9px,
+          2.55vw,
+          12px
+        );
+
+      font-weight: 650;
+
       line-height: 1.6;
-
-      color: #806d55;
-
-      padding: 0 8px;
-
-      flex-shrink: 1;
     }
 
-    .bottom-note strong {
-      color: #a56f1d;
-      font-weight: 800;
+    .trust-mark {
+      width: 18px;
+      height: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 6px;
+
+      background: #edf5ef;
+
+      color: #39815b;
+
+      font-size: 10px;
+
+      flex-shrink: 0;
     }
+
 
     /* =========================================================
-       پیام کپی
+       TOAST
        ========================================================= */
 
     .toast {
       position: fixed;
 
       left: 50%;
+
       bottom:
         calc(
-          max(14px, env(safe-area-inset-bottom)) + 10px
+          max(12px, var(--safe-bottom))
+          + 8px
         );
 
+      z-index: 50;
+
       transform:
-        translateX(-50%)
-        translateY(20px);
+        translate(-50%, 18px);
 
       opacity: 0;
 
       pointer-events: none;
 
-      z-index: 100;
-
-      background: #173e2a;
-      color: #f6d37b;
-
-      padding: 10px 18px;
+      padding:
+        10px 17px;
 
       border-radius: 12px;
 
-      font-size: 13px;
+      background:
+        #151d2d;
+
+      color: #ffffff;
+
+      font-size: 12px;
+
       font-weight: 800;
 
-      box-shadow: 0 8px 25px rgba(0,0,0,.18);
+      box-shadow:
+        0 10px 28px rgba(21,29,45,.20);
+
+      white-space: nowrap;
 
       transition:
         opacity .22s ease,
         transform .22s ease;
-
-      white-space: nowrap;
     }
 
     .toast.show {
       opacity: 1;
+
       transform:
-        translateX(-50%)
-        translateY(0);
+        translate(-50%, 0);
     }
 
+
     /* =========================================================
-       ارتفاع‌های خیلی کم
-       مخصوص گوشی‌های قدیمی / landscape / J3
+       SMALL HEIGHT DEVICES
        ========================================================= */
 
-    @media (max-height: 650px) {
+    @media (max-height: 680px) {
 
-      .page {
-        gap: 7px;
+      .content {
+        gap: 8px;
       }
 
-      .brand-mark {
-        width: 42px;
-        height: 42px;
-        font-size: 20px;
-        margin-bottom: 3px;
+      .hero h1 {
+        font-size: 26px;
       }
 
-      .brand-name {
-        font-size: 20px;
+      .hero p {
+        margin-top: 3px;
       }
 
-      .brand-sub {
-        display: none;
+      .guide-card {
+        padding: 14px 16px;
+        border-radius: 20px;
       }
 
-      .guide {
-        padding: 10px 12px;
-        border-radius: 16px;
+      .divider {
+        margin: 10px 0;
       }
 
-      .guide-label {
-        margin-bottom: 5px;
-      }
-
-      .guide-text {
-        font-size: 13px;
-        line-height: 1.55;
-      }
-
-      .enter-btn {
-        min-height: 53px;
-        font-size: 19px;
-        border-radius: 15px;
+      .cta-btn {
+        min-height: 56px;
       }
 
       .url-box,
       .copy-btn {
-        min-height: 45px;
+        min-height: 47px;
       }
 
-      .bottom-note {
-        font-size: 10px;
+      .trust {
+        font-size: 9px;
       }
+
     }
 
+
     /* =========================================================
-       ارتفاع بسیار کم
+       VERY SHORT DEVICES
        ========================================================= */
 
-    @media (max-height: 540px) {
+    @media (max-height: 570px) {
 
-      .page {
-        gap: 5px;
-      }
-
-      .brand {
+      .mini-brand {
         display: none;
       }
 
-      .guide {
-        padding: 9px 11px;
+      .hero h1 {
+        font-size: 22px;
       }
 
-      .guide-label {
-        font-size: 12px;
-        margin-bottom: 3px;
+      .hero p {
+        display: none;
       }
 
-      .guide-text {
-        font-size: 12px;
-        line-height: 1.45;
+      .guide-card {
+        padding: 11px 13px;
       }
 
-      .enter-btn {
-        min-height: 49px;
-        font-size: 18px;
+      .step-number {
+        flex-basis: 28px;
+        width: 28px;
+        height: 28px;
+        border-radius: 9px;
+      }
+
+      .step-title {
+        font-size: 13px;
+      }
+
+      .step-text {
+        font-size: 11.5px;
+        line-height: 1.55;
+      }
+
+      .divider {
+        margin: 7px 0;
+      }
+
+      .cta-btn {
+        min-height: 50px;
+        border-radius: 15px;
+        font-size: 17px;
       }
 
       .url-box,
@@ -647,13 +892,15 @@
         min-height: 42px;
       }
 
-      .bottom-note {
+      .trust {
         display: none;
       }
+
     }
 
+
     /* =========================================================
-       عرض بسیار کم
+       VERY NARROW DEVICES
        ========================================================= */
 
     @media (max-width: 340px) {
@@ -663,30 +910,29 @@
         padding-right: 9px;
       }
 
-      .page {
-        gap: 6px;
+      .guide-card {
+        padding-left: 11px;
+        padding-right: 11px;
       }
 
-      .guide-text {
-        font-size: 13px;
-      }
-
-      .url-section {
-        gap: 6px;
+      .url-row {
+        gap: 5px;
       }
 
       .copy-btn {
         flex-basis: 78px;
-        font-size: 12px;
+        font-size: 11px;
       }
 
       .url-box {
-        font-size: 12px;
+        font-size: 10.5px;
       }
+
     }
 
+
     /* =========================================================
-       کاهش حرکت برای دستگاه‌هایی که این گزینه را فعال کرده‌اند
+       REDUCED MOTION
        ========================================================= */
 
     @media (prefers-reduced-motion: reduce) {
@@ -697,117 +943,177 @@
         animation: none !important;
         transition: none !important;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <main class="page">
+  <div class="ambient one"></div>
+  <div class="ambient two"></div>
 
-    <!-- =========================
-         برند
-         ========================= -->
 
-    <section class="brand" aria-label="گالری هنری روشا">
+  <main class="stage">
 
-      <div class="brand-mark" aria-hidden="true">
-        ✦
+    <div class="content">
+
+
+      <!-- =========================
+           BRAND
+           ========================= -->
+
+      <header class="top">
+
+        <div class="mini-brand">
+          <span class="mini-dot"></span>
+          گالری هنری روشا
+        </div>
+
+      </header>
+
+
+      <!-- =========================
+           HERO
+           ========================= -->
+
+      <section class="hero">
+
+        <h1>
+          آماده‌ای؟
+          <span>وارد سایت شو.</span>
+        </h1>
+
+        <p>
+          برای ادامه، فقط یک مرحله کوتاه باقی مانده است.
+        </p>
+
+      </section>
+
+
+      <!-- =========================
+           GUIDE CARD
+           ========================= -->
+
+      <section class="guide-card">
+
+
+        <div class="step">
+
+          <div class="step-number">
+            ۱
+          </div>
+
+          <div class="step-content">
+
+            <div class="step-title">
+              قبل از ورود، فیلترشکن را خاموش کنید
+            </div>
+
+            <p class="step-text">
+
+              برای اینکه سایت بدون اختلال و کامل نمایش داده شود،
+              لطفاً ابتدا
+              <strong>فیلترشکن خود را خاموش کنید.</strong>
+
+              سپس روی «ورود به سایت» بزنید.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <!-- =====================
+             CTA
+             ===================== -->
+
+        <div class="cta-wrap">
+
+          <a
+            href="https://www.rosha-24.ir/m3k"
+            id="enterBtn"
+            class="cta-btn"
+            aria-label="ورود به سایت گالری هنری روشا"
+          >
+
+            <span class="cta-label">
+              ورود به سایت
+            </span>
+
+            <span class="cta-arrow">
+              ←
+            </span>
+
+          </a>
+
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <!-- =====================
+             URL
+             ===================== -->
+
+        <div class="url-title">
+
+          <span>
+            آدرس مستقیم سایت
+          </span>
+
+          <span>
+            برای ورود دستی
+          </span>
+
+        </div>
+
+
+        <div class="url-row">
+
+          <div
+            class="url-box"
+            id="urlText"
+          >
+            www.rosha-24.ir/m3k
+          </div>
+
+          <button
+            type="button"
+            class="copy-btn"
+            id="copyBtn"
+          >
+            کپی آدرس
+          </button>
+
+        </div>
+
+
+      </section>
+
+
+      <!-- =========================
+           TRUST
+           ========================= -->
+
+      <div class="trust">
+
+        <span class="trust-mark">
+          ✓
+        </span>
+
+        اگر ورود مستقیم انجام نشد،
+        آدرس را در Chrome یا Safari باز کنید.
+
       </div>
 
-      <div class="brand-name">
-        گالری هنری <span>روشا</span>
-      </div>
-
-      <div class="brand-sub">
-        راهنمای ورود به سایت
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         راهنمای ورود
-         ========================= -->
-
-    <section class="guide">
-
-      <div class="guide-label">
-        راهنمای ورود
-      </div>
-
-      <p class="guide-text">
-
-        برای شرکت در قرعه‌کشی، لطفاً برای ورود بدون
-        اختلال به سایت، ابتدا
-        <strong>فیلترشکن خود را خاموش کنید.</strong>
-
-        <br>
-
-        سپس مستقیماً وارد سایت شوید؛ یا در صورت نیاز،
-        آدرس سایت را کپی کرده و در مرورگر خود وارد نمایید.
-
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         ورود به سایت
-         ========================= -->
-
-    <a
-      href="https://www.rosha-24.ir/m3k"
-      class="enter-btn"
-      id="enterBtn"
-      aria-label="ورود به سایت گالری هنری روشا"
-    >
-
-      <span class="enter-icon">↗</span>
-
-      <span class="enter-label">
-        ورود به سایت
-      </span>
-
-    </a>
-
-
-    <!-- =========================
-         آدرس + کپی
-         ========================= -->
-
-    <section
-      class="url-section"
-      aria-label="آدرس سایت"
-    >
-
-      <div
-        class="url-box"
-        id="urlText"
-      >
-        www.rosha-24.ir/m3k
-      </div>
-
-      <button
-        type="button"
-        class="copy-btn"
-        id="copyBtn"
-      >
-        کپی آدرس
-      </button>
-
-    </section>
-
-
-    <!-- =========================
-         توضیح پایین
-         ========================= -->
-
-    <div class="bottom-note">
-
-      در صورت باز نشدن مستقیم،
-      آدرس بالا را در <strong>Chrome</strong> یا
-      <strong>Safari</strong> وارد کنید.
 
     </div>
 
@@ -815,7 +1121,7 @@
 
 
   <!-- =========================
-       Toast
+       TOAST
        ========================= -->
 
   <div
@@ -829,33 +1135,39 @@
 
 
   <script>
+
     (function () {
 
       "use strict";
 
-      /* =======================================================
-         تنظیمات اصلی
-         ======================================================= */
-
-      var SITE_URL = "https://www.rosha-24.ir/m3k";
-      var COPY_URL = "www.rosha-24.ir/m3k";
-
 
       /* =======================================================
-         عناصر
+         SETTINGS
          ======================================================= */
 
-      var enterBtn = document.getElementById("enterBtn");
-      var copyBtn = document.getElementById("copyBtn");
-      var urlText = document.getElementById("urlText");
-      var toast = document.getElementById("toast");
+      var SITE_URL =
+        "https://www.rosha-24.ir/m3k";
+
+      var COPY_URL =
+        "www.rosha-24.ir/m3k";
+
+
+      var enterBtn =
+        document.getElementById("enterBtn");
+
+      var copyBtn =
+        document.getElementById("copyBtn");
+
+      var toast =
+        document.getElementById("toast");
 
 
       /* =======================================================
-         تشخیص سیستم
+         DEVICE DETECTION
          ======================================================= */
 
-      var ua = navigator.userAgent || "";
+      var ua =
+        navigator.userAgent || "";
 
       var isAndroid =
         /Android/i.test(ua);
@@ -869,73 +1181,80 @@
 
 
       /* =======================================================
-         ساخت لینک ورود
-         
-         Android:
-         تلاش برای خارج شدن از WebView و باز کردن مرورگر
-
-         iOS:
-         تلاش مستقیم برای باز کردن Safari
-         
-         نکته:
-         Instagram ممکن است این رفتار را محدود کند.
+         OPEN SITE
          ======================================================= */
 
-      function setEntryLink() {
+      function openSite() {
+
+        /*
+         * Android:
+         * استفاده از Intent برای درخواست مرورگر خارجی.
+         */
 
         if (isAndroid) {
 
-          var intentUrl =
+          var intent =
             "intent://www.rosha-24.ir/m3k" +
             "#Intent;" +
             "scheme=https;" +
             "action=android.intent.action.VIEW;" +
             "end";
 
-          enterBtn.href = intentUrl;
+          window.location.href =
+            intent;
 
-        } else {
+          setTimeout(
+            function () {
 
-          enterBtn.href = SITE_URL;
+              if (!document.hidden) {
+                window.location.href =
+                  SITE_URL;
+              }
 
+            },
+            1200
+          );
+
+          return;
         }
+
+
+        /*
+         * iOS:
+         * انتقال مستقیم به HTTPS.
+         *
+         * نکته:
+         * Instagram می‌تواند رفتار WebView را
+         * محدود کند و وب‌سایت نمی‌تواند Safari
+         * را با تضمین 100٪ مجبور به باز شدن کند.
+         */
+
+        if (isIOS) {
+
+          window.location.href =
+            SITE_URL;
+
+          return;
+        }
+
+
+        /*
+         * Desktop / سایر مرورگرها
+         */
+
+        window.location.href =
+          SITE_URL;
 
       }
 
-      setEntryLink();
-
-
-      /* =======================================================
-         جلوگیری از رفتار عجیب کلیک در WebView
-         ======================================================= */
 
       enterBtn.addEventListener(
         "click",
-        function () {
+        function (event) {
 
-          /*
-           * روی Android ابتدا intent اجرا می‌شود.
-           * اگر WebView اجازه نداد، مرورگر معمولاً همان
-           * لینک HTTPS را باز می‌کند.
-           */
+          event.preventDefault();
 
-          if (isAndroid) {
-
-            setTimeout(function () {
-
-              if (!document.hidden) {
-                window.location.href = SITE_URL;
-              }
-
-            }, 900);
-
-          }
-
-          /*
-           * روی iPhone لینک HTTPS عادی استفاده می‌شود.
-           * Safari را نمی‌توان از وب‌سایت با تضمین 100٪
-           * به‌صورت اجباری کنترل کرد.
-           */
+          openSite();
 
         },
         false
@@ -943,87 +1262,46 @@
 
 
       /* =======================================================
-         Toast
+         TOAST
          ======================================================= */
 
       var toastTimer = null;
 
       function showToast(message) {
 
-        toast.textContent = message;
+        toast.textContent =
+          message;
 
         toast.classList.add("show");
 
-        clearTimeout(toastTimer);
-
-        toastTimer = setTimeout(
-          function () {
-            toast.classList.remove("show");
-          },
-          1800
+        clearTimeout(
+          toastTimer
         );
+
+        toastTimer =
+          setTimeout(
+            function () {
+
+              toast.classList.remove(
+                "show"
+              );
+
+            },
+            1800
+          );
 
       }
 
 
       /* =======================================================
-         کپی آدرس
+         COPY
          ======================================================= */
-
-      function fallbackCopy(text) {
-
-        var textarea =
-          document.createElement("textarea");
-
-        textarea.value = text;
-
-        textarea.setAttribute(
-          "readonly",
-          ""
-        );
-
-        textarea.style.position = "fixed";
-        textarea.style.left = "-9999px";
-        textarea.style.top = "0";
-
-        document.body.appendChild(textarea);
-
-        textarea.focus();
-        textarea.select();
-
-        var success = false;
-
-        try {
-
-          success =
-            document.execCommand("copy");
-
-        } catch (e) {
-
-          success = false;
-
-        }
-
-        document.body.removeChild(textarea);
-
-        if (success) {
-
-          copySuccess();
-
-        } else {
-
-          showToast(
-            "لطفاً آدرس را لمس و کپی کنید"
-          );
-
-        }
-
-      }
-
 
       function copySuccess() {
 
-        copyBtn.classList.add("copied");
+        copyBtn.classList.add(
+          "copied"
+        );
 
         copyBtn.textContent =
           "✓ کپی شد";
@@ -1035,7 +1313,9 @@
         setTimeout(
           function () {
 
-            copyBtn.classList.remove("copied");
+            copyBtn.classList.remove(
+              "copied"
+            );
 
             copyBtn.textContent =
               "کپی آدرس";
@@ -1043,6 +1323,73 @@
           },
           1800
         );
+
+      }
+
+
+      function fallbackCopy(text) {
+
+        var textarea =
+          document.createElement(
+            "textarea"
+          );
+
+        textarea.value =
+          text;
+
+        textarea.setAttribute(
+          "readonly",
+          ""
+        );
+
+        textarea.style.position =
+          "fixed";
+
+        textarea.style.left =
+          "-9999px";
+
+        textarea.style.top =
+          "0";
+
+        document.body.appendChild(
+          textarea
+        );
+
+        textarea.focus();
+        textarea.select();
+
+        var success =
+          false;
+
+        try {
+
+          success =
+            document.execCommand(
+              "copy"
+            );
+
+        } catch (error) {
+
+          success =
+            false;
+
+        }
+
+        document.body.removeChild(
+          textarea
+        );
+
+        if (success) {
+
+          copySuccess();
+
+        } else {
+
+          showToast(
+            "لطفاً آدرس را دستی کپی کنید"
+          );
+
+        }
 
       }
 
@@ -1059,23 +1406,23 @@
             navigator.clipboard
               .writeText(COPY_URL)
               .then(
-                function () {
-
-                  copySuccess();
-
-                }
+                copySuccess
               )
               .catch(
                 function () {
 
-                  fallbackCopy(COPY_URL);
+                  fallbackCopy(
+                    COPY_URL
+                  );
 
                 }
               );
 
           } else {
 
-            fallbackCopy(COPY_URL);
+            fallbackCopy(
+              COPY_URL
+            );
 
           }
 
@@ -1085,7 +1432,7 @@
 
 
       /* =======================================================
-         جلوگیری از زوم و gestureهای ناخواسته
+         NO ZOOM
          ======================================================= */
 
       document.addEventListener(
@@ -1114,59 +1461,61 @@
 
 
       /* =======================================================
-         جلوگیری از کشیدن صفحه
+         NO SCROLL
          ======================================================= */
 
       document.addEventListener(
         "touchmove",
         function (event) {
-
           event.preventDefault();
-
         },
         { passive: false }
       );
 
 
       /* =======================================================
-         مدیریت تغییر ارتفاع مرورگر موبایل
+         REAL VIEWPORT
          ======================================================= */
 
-      function updateViewportHeight() {
+      function updateViewport() {
 
         var height =
           window.visualViewport
             ? window.visualViewport.height
             : window.innerHeight;
 
-        document.documentElement.style.setProperty(
-          "--real-vh",
-          height + "px"
-        );
+        document.documentElement
+          .style
+          .setProperty(
+            "--real-vh",
+            height + "px"
+          );
 
       }
 
 
-      updateViewportHeight();
+      updateViewport();
+
 
       window.addEventListener(
         "resize",
-        updateViewportHeight,
+        updateViewport,
         { passive: true }
       );
+
 
       if (window.visualViewport) {
 
         window.visualViewport.addEventListener(
           "resize",
-          updateViewportHeight,
+          updateViewport,
           { passive: true }
         );
 
       }
 
-
     })();
+
   </script>
 
 </body>
