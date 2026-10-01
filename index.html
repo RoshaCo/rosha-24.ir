@@ -2,18 +2,33 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-  <meta name="theme-color" content="#faf3e6">
-  <title>Gold Talent — گالری هنری روشا</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width,
+             initial-scale=1,
+             maximum-scale=1,
+             user-scalable=no,
+             viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#f8f1e6">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>ورود به گالری هنری روشا</title>
 
   <link rel="icon" href="data:,">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+  >
 
   <style>
     /* =========================================================
-       استایل ۱ سایت — Neo Editorial (کرم + سبز + طلایی)
-       صفحه اسکرول‌ناپذیر — همه‌چیز توی یه ویوپورت
+       ROSHA 24 — Instagram Gateway Landing
+       بدون اسکرول | Mobile Safe Area | سبک و سریع
        ========================================================= */
 
     * {
@@ -24,524 +39,1134 @@
     }
 
     html {
-      font-size: 10px;
+      width: 100%;
       height: 100%;
       overflow: hidden;
+      background: #f8f1e6;
     }
 
     body {
-      font-family: 'Vazirmatn', Tahoma, sans-serif;
-      background: #faf3e6;
-      color: #154726;
-      height: 100%;
       width: 100%;
+      height: 100%;
+      min-height: 100dvh;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.6rem;
-      direction: rtl;
-      line-height: 1.5;
 
-      background-image:
-        radial-gradient(circle at 15% 15%, rgba(254, 178, 145, 0.2) 0%, transparent 45%),
-        radial-gradient(circle at 85% 85%, rgba(255, 213, 80, 0.25) 0%, transparent 45%);
-      background-attachment: fixed;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
 
-      /* جلوگیری از اسکرول روی موبایل */
+      background:
+        radial-gradient(
+          circle at 10% 8%,
+          rgba(244, 190, 104, 0.25),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 92% 92%,
+          rgba(199, 139, 48, 0.16),
+          transparent 35%
+        ),
+        linear-gradient(
+          145deg,
+          #fffaf2 0%,
+          #f8f1e6 52%,
+          #f3e8d7 100%
+        );
+
+      color: #183d29;
+
       position: fixed;
       inset: 0;
-    }
 
-    /* =========================================================
-       کانتینر اصلی
-       ========================================================= */
-    .wrap {
-      max-width: 480px;
-      width: 100%;
-      max-height: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      gap: clamp(1.2rem, 3vh, 2rem);
-      text-align: center;
+      align-items: center;
+
+      padding:
+        max(12px, env(safe-area-inset-top))
+        max(12px, env(safe-area-inset-right))
+        max(12px, env(safe-area-inset-bottom))
+        max(12px, env(safe-area-inset-left));
+
+      -webkit-user-select: none;
+      user-select: none;
     }
 
     /* =========================================================
-       تیتر برند
+       پس‌زمینه‌های بسیار سبک
        ========================================================= */
-    .brand {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.8rem;
-    }
 
-    .brand-icon {
-      width: clamp(6rem, 14vh, 8.5rem);
-      height: clamp(6rem, 14vh, 8.5rem);
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      pointer-events: none;
       border-radius: 50%;
-      background: linear-gradient(180deg, #ffcaa6 0%, #feb291 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: clamp(3rem, 7vh, 4.2rem);
-      box-shadow:
-        inset 0 3px 0 rgba(255, 255, 255, 0.7),
-        0 6px 0 #d88a5e,
-        0 12px 24px -6px rgba(21, 71, 38, 0.3),
-        0 0 50px rgba(254, 178, 145, 0.6);
-      animation: brandPulse 3s ease-in-out infinite;
+      filter: blur(1px);
     }
 
-    @keyframes brandPulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow:
-          inset 0 3px 0 rgba(255, 255, 255, 0.7),
-          0 6px 0 #d88a5e,
-          0 12px 24px -6px rgba(21, 71, 38, 0.3),
-          0 0 50px rgba(254, 178, 145, 0.6);
-      }
-      50% {
-        transform: scale(1.06);
-        box-shadow:
-          inset 0 3px 0 rgba(255, 255, 255, 0.7),
-          0 6px 0 #d88a5e,
-          0 12px 24px -6px rgba(21, 71, 38, 0.4),
-          0 0 70px rgba(254, 178, 145, 0.85);
-      }
+    body::before {
+      width: 180px;
+      height: 180px;
+      top: -90px;
+      left: -70px;
+      background: rgba(210, 160, 67, 0.14);
     }
 
-    .brand-title {
-      font-family: 'Vazirmatn', sans-serif;
-      font-size: clamp(3.6rem, 9vh, 5.2rem);
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: -0.02em;
-      color: #154726;
-      text-shadow:
-        0 2px 0 #ffffff,
-        0 3px 0 #f5e8d4,
-        0 6px 16px rgba(21, 71, 38, 0.15);
-      direction: ltr;
-    }
-
-    .brand-title .gold {
-      color: #c8862a;
+    body::after {
+      width: 220px;
+      height: 220px;
+      bottom: -130px;
+      right: -100px;
+      background: rgba(30, 91, 55, 0.08);
     }
 
     /* =========================================================
-       کادر راهنما
+       قاب اصلی
        ========================================================= */
-    .hint-box {
-      width: 100%;
-      padding: clamp(1.4rem, 3vh, 2rem) clamp(1.2rem, 4vw, 1.8rem);
-      background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(250, 243, 230, 0.75) 100%
-      );
-      backdrop-filter: blur(12px) saturate(140%);
-      -webkit-backdrop-filter: blur(12px) saturate(140%);
-      border: 2px solid rgba(255, 255, 255, 0.95);
-      border-radius: 1.6rem;
-      box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 1),
-        0 6px 0 #f0d5b8,
-        0 14px 28px -8px rgba(21, 71, 38, 0.2);
-      text-align: right;
+
+    .page {
+      width: min(100%, 480px);
+
+      height: 100%;
+      max-height: 760px;
+
       display: flex;
       flex-direction: column;
-      gap: clamp(1rem, 2vh, 1.4rem);
+      justify-content: center;
+      align-items: stretch;
+
+      gap: clamp(8px, 1.7vh, 16px);
+
+      position: relative;
+      z-index: 2;
     }
 
-    .hint-title {
-      font-size: clamp(1.7rem, 4.5vw, 2.2rem);
-      font-weight: 800;
-      color: #6b1212;
+    /* =========================================================
+       برند
+       ========================================================= */
+
+    .brand {
+      text-align: center;
+      flex-shrink: 1;
+    }
+
+    .brand-mark {
+      width: clamp(42px, 8.5vh, 66px);
+      height: clamp(42px, 8.5vh, 66px);
+
+      margin: 0 auto clamp(4px, 1vh, 9px);
+
+      border-radius: 50%;
+
       display: flex;
       align-items: center;
-      gap: 0.8rem;
-      line-height: 1.3;
+      justify-content: center;
+
+      font-size: clamp(21px, 4.5vh, 32px);
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff4ce,
+          #e5bd69
+        );
+
+      border: 2px solid rgba(255,255,255,.95);
+
+      box-shadow:
+        0 5px 14px rgba(72, 52, 19, .13),
+        inset 0 2px 3px rgba(255,255,255,.9);
+
+      animation: softFloat 4s ease-in-out infinite;
     }
 
-    .hint-title .icon {
-      font-size: 1.15em;
+    @keyframes softFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+
+    .brand-name {
+      font-size: clamp(21px, 4.8vw, 30px);
+      font-weight: 900;
+      line-height: 1.05;
+      color: #174a2d;
+      letter-spacing: -.5px;
+    }
+
+    .brand-name span {
+      color: #b77b20;
+    }
+
+    .brand-sub {
+      margin-top: 3px;
+      font-size: clamp(10px, 2.5vw, 13px);
+      font-weight: 600;
+      color: #876d4c;
+    }
+
+    /* =========================================================
+       کارت راهنما
+       ========================================================= */
+
+    .guide {
+      width: 100%;
+
+      padding:
+        clamp(12px, 2.2vh, 19px)
+        clamp(13px, 3.5vw, 20px);
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.94),
+          rgba(255,250,242,.83)
+        );
+
+      border: 1px solid rgba(255,255,255,.95);
+
+      box-shadow:
+        0 10px 28px rgba(53, 47, 32, .10),
+        inset 0 1px 0 rgba(255,255,255,.95);
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+
+      text-align: right;
+
+      flex-shrink: 1;
+    }
+
+    .guide-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      color: #9a681d;
+
+      font-size: clamp(13px, 3.2vw, 16px);
+      font-weight: 800;
+
+      margin-bottom: clamp(7px, 1.4vh, 11px);
+    }
+
+    .guide-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #c18a2b;
+      box-shadow: 0 0 0 5px rgba(193,138,43,.10);
       flex-shrink: 0;
     }
 
-    .hint-text {
-      font-size: clamp(1.5rem, 4vw, 1.8rem);
-      font-weight: 500;
-      line-height: 1.7;
-      color: #154726;
-      opacity: 0.9;
+    .guide-text {
+      font-size: clamp(14px, 3.7vw, 18px);
+      font-weight: 600;
+      line-height: 1.75;
+
+      color: #234a34;
     }
 
-    .hint-text strong {
-      color: #c8862a;
-      font-weight: 800;
+    .guide-text strong {
+      color: #a86d16;
+      font-weight: 900;
     }
 
     /* =========================================================
-       لینک سایت + کپی (زیر هم)
+       دکمه ورود
        ========================================================= */
-    .url-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      width: 100%;
-    }
 
-    .url-text {
+    .enter-btn {
+      width: 100%;
+      min-height: clamp(58px, 9vh, 76px);
+
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      padding: 1.6rem 1rem;
-      background: #154726;
-      color: #ffd550;
-      border-radius: 1rem;
-      font-family: 'Courier New', monospace;
-      font-size: clamp(1.6rem, 4.5vw, 2rem);
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      direction: ltr;
-      user-select: all;
-      word-break: break-all;
-      text-align: center;
+      gap: 10px;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #a92f31 0%,
+          #c4433e 50%,
+          #932629 100%
+        );
+
+      color: #fff;
+
+      border: 1px solid rgba(255,255,255,.55);
+
+      text-decoration: none;
+
+      font-size: clamp(19px, 5vw, 25px);
+      font-weight: 900;
+
       box-shadow:
-        inset 0 3px 0 rgba(0, 0, 0, 0.3),
-        inset 0 -2px 0 rgba(255, 255, 255, 0.08);
-      text-shadow: 0 0 8px rgba(255, 213, 80, 0.4);
-      min-height: 5.4rem;
+        0 5px 0 #68191b,
+        0 12px 26px rgba(139,37,39,.23),
+        inset 0 1px 0 rgba(255,255,255,.30);
+
+      position: relative;
+      overflow: hidden;
+
+      transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+
+      flex-shrink: 0;
+    }
+
+    /* درخشش خیلی سبک */
+
+    .enter-btn::after {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      bottom: 0;
+      right: -80%;
+
+      width: 45%;
+
+      background:
+        linear-gradient(
+          100deg,
+          transparent,
+          rgba(255,255,255,.18),
+          transparent
+        );
+
+      transform: skewX(-18deg);
+
+      animation: shine 4s ease-in-out infinite;
+    }
+
+    @keyframes shine {
+      0%, 65% {
+        right: -80%;
+      }
+
+      85%, 100% {
+        right: 130%;
+      }
+    }
+
+    .enter-btn:active {
+      transform: translateY(4px);
+
+      box-shadow:
+        0 1px 0 #68191b,
+        0 5px 12px rgba(139,37,39,.20),
+        inset 0 1px 0 rgba(255,255,255,.20);
+    }
+
+    .enter-icon {
+      font-size: 1.05em;
+      line-height: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .enter-label {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================================================
+       آدرس سایت
+       ========================================================= */
+
+    .url-section {
+      width: 100%;
+
+      display: flex;
+      align-items: stretch;
+      gap: 8px;
+
+      direction: ltr;
+
+      flex-shrink: 0;
+    }
+
+    .url-box {
+      flex: 1;
+      min-width: 0;
+
+      min-height: clamp(49px, 7vh, 60px);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 8px;
+
+      border-radius: 14px;
+
+      background: #173e2a;
+
+      color: #f6d37b;
+
+      border: 1px solid rgba(255,255,255,.16);
+
+      font-family: "Courier New", monospace;
+      font-size: clamp(13px, 3.6vw, 18px);
+      font-weight: 800;
+
+      letter-spacing: .2px;
+
+      white-space: nowrap;
+      overflow: hidden;
+
+      direction: ltr;
+
+      box-shadow:
+        0 5px 15px rgba(20,60,40,.15),
+        inset 0 1px 0 rgba(255,255,255,.08);
     }
 
     .copy-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-      width: 100%;
-      padding: 1.6rem 1rem;
-      background: linear-gradient(180deg, #ffcaa6 0%, #feb291 100%);
-      color: #154726;
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      border-radius: 1rem;
-      font-family: 'Vazirmatn', sans-serif;
-      font-size: clamp(1.6rem, 4.5vw, 2rem);
-      font-weight: 800;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-      box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.7),
-        0 5px 0 #d88a5e,
-        0 10px 18px -4px rgba(21, 71, 38, 0.25);
-      min-height: 5.4rem;
-    }
+      flex: 0 0 clamp(82px, 23vw, 112px);
 
-    .copy-btn:hover {
-      transform: translateY(-2px);
+      min-height: clamp(49px, 7vh, 60px);
+
+      border: 0;
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #e8c36d,
+          #c99331
+        );
+
+      color: #183d29;
+
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+
+      font-size: clamp(13px, 3.5vw, 17px);
+      font-weight: 900;
+
+      cursor: pointer;
+
       box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.7),
-        0 7px 0 #d88a5e,
-        0 14px 24px -4px rgba(21, 71, 38, 0.3);
+        0 4px 0 #9a6b20,
+        0 8px 16px rgba(91,65,22,.16),
+        inset 0 1px 0 rgba(255,255,255,.65);
+
+      transition:
+        transform .15s ease,
+        background .2s ease;
     }
 
     .copy-btn:active {
       transform: translateY(3px);
       box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.7),
-        0 2px 0 #d88a5e,
-        0 4px 8px rgba(21, 71, 38, 0.2);
+        0 1px 0 #9a6b20,
+        0 4px 8px rgba(91,65,22,.12);
     }
 
     .copy-btn.copied {
-      background: linear-gradient(180deg, #b8e08e 0%, #97c74b 100%);
-      color: #ffffff;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      background: #4f8b5b;
+      color: #fff;
       box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.4),
-        0 5px 0 #4d7a1f,
-        0 10px 18px -4px rgba(21, 71, 38, 0.3);
+        0 4px 0 #35633e,
+        0 8px 16px rgba(53,99,62,.16);
     }
 
     /* =========================================================
-       دکمه ورود به سایت — بزرگ و چشمگیر
+       متن کوتاه پایین
        ========================================================= */
-    .enter-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      width: 100%;
-      padding: clamp(1.8rem, 4vh, 2.6rem) 1.6rem;
-      background: linear-gradient(180deg, #c73e3e 0%, #8b2525 100%);
-      color: #ffffff;
-      border: 2px solid rgba(255, 255, 255, 0.5);
-      border-radius: 1.4rem;
-      font-family: 'Vazirmatn', sans-serif;
-      font-size: clamp(2rem, 6vw, 2.6rem);
+
+    .bottom-note {
+      text-align: center;
+
+      font-size: clamp(10px, 2.7vw, 13px);
+      line-height: 1.6;
+
+      color: #806d55;
+
+      padding: 0 8px;
+
+      flex-shrink: 1;
+    }
+
+    .bottom-note strong {
+      color: #a56f1d;
       font-weight: 800;
-      text-decoration: none;
-      cursor: pointer;
-      text-align: center;
-      letter-spacing: 0.02em;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-      box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.25),
-        inset 0 -3px 0 rgba(0, 0, 0, 0.25),
-        0 6px 0 #5c1515,
-        0 12px 24px -4px rgba(199, 62, 62, 0.5),
-        0 0 40px rgba(199, 62, 62, 0.35);
-      transition: all 0.15s cubic-bezier(0.19, 1, 0.22, 1);
-      transform: translateY(0);
-      animation: enterGlow 2.5s ease-in-out infinite;
-    }
-
-    @keyframes enterGlow {
-      0%, 100% {
-        box-shadow:
-          inset 0 2px 0 rgba(255, 255, 255, 0.25),
-          inset 0 -3px 0 rgba(0, 0, 0, 0.25),
-          0 6px 0 #5c1515,
-          0 12px 24px -4px rgba(199, 62, 62, 0.5),
-          0 0 40px rgba(199, 62, 62, 0.35);
-      }
-      50% {
-        box-shadow:
-          inset 0 2px 0 rgba(255, 255, 255, 0.3),
-          inset 0 -3px 0 rgba(0, 0, 0, 0.25),
-          0 6px 0 #5c1515,
-          0 12px 24px -4px rgba(199, 62, 62, 0.6),
-          0 0 70px rgba(199, 62, 62, 0.6);
-      }
-    }
-
-    .enter-btn:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.3),
-        inset 0 -3px 0 rgba(0, 0, 0, 0.25),
-        0 8px 0 #5c1515,
-        0 16px 32px -4px rgba(199, 62, 62, 0.6),
-        0 0 60px rgba(199, 62, 62, 0.6);
-    }
-
-    .enter-btn:active {
-      transform: translateY(4px);
-      box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.25),
-        inset 0 -3px 0 rgba(0, 0, 0, 0.25),
-        0 2px 0 #5c1515,
-        0 4px 8px rgba(199, 62, 62, 0.4);
-    }
-
-    .enter-btn .icon {
-      font-size: 1.15em;
-      line-height: 1;
     }
 
     /* =========================================================
-       پاورقی
+       پیام کپی
        ========================================================= */
-    .footer-note {
-      width: 100%;
-      padding: clamp(1.2rem, 2.5vh, 1.6rem) clamp(1rem, 3vw, 1.4rem);
-      background: rgba(255, 213, 80, 0.3);
-      border: 2px dashed #d4a500;
-      border-radius: 1.2rem;
-      font-size: clamp(1.4rem, 3.8vw, 1.7rem);
-      font-weight: 700;
-      line-height: 1.7;
-      color: #6b1212;
-      text-align: center;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 0.8rem;
-    }
 
-    .footer-note .lock {
-      font-size: 1.2em;
-      line-height: 1.4;
-      flex-shrink: 0;
-    }
-
-    /* =========================================================
-       Toast
-       ========================================================= */
     .toast {
       position: fixed;
-      bottom: 2.4rem;
+
       left: 50%;
-      transform: translateX(-50%) translateY(3rem);
-      background: #154726;
-      color: #ffd550;
-      padding: 1.4rem 2.4rem;
-      border-radius: 1.2rem;
-      font-family: 'Vazirmatn', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      box-shadow:
-        0 8px 24px rgba(21, 71, 38, 0.5),
-        0 0 0 2px rgba(255, 213, 80, 0.7),
-        0 0 30px rgba(255, 213, 80, 0.4);
+      bottom:
+        calc(
+          max(14px, env(safe-area-inset-bottom)) + 10px
+        );
+
+      transform:
+        translateX(-50%)
+        translateY(20px);
+
       opacity: 0;
+
       pointer-events: none;
-      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-      z-index: 9999;
+
+      z-index: 100;
+
+      background: #173e2a;
+      color: #f6d37b;
+
+      padding: 10px 18px;
+
+      border-radius: 12px;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,.18);
+
+      transition:
+        opacity .22s ease,
+        transform .22s ease;
+
       white-space: nowrap;
     }
 
     .toast.show {
       opacity: 1;
-      transform: translateX(-50%) translateY(0);
+      transform:
+        translateX(-50%)
+        translateY(0);
     }
 
     /* =========================================================
-       موبایل‌های کوچک (Samsung J3 و ...)
+       ارتفاع‌های خیلی کم
+       مخصوص گوشی‌های قدیمی / landscape / J3
        ========================================================= */
-    @media (max-height: 640px) {
-      html { font-size: 8.5px; }
-      .wrap { gap: 1rem; }
+
+    @media (max-height: 650px) {
+
+      .page {
+        gap: 7px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+        margin-bottom: 3px;
+      }
+
+      .brand-name {
+        font-size: 20px;
+      }
+
+      .brand-sub {
+        display: none;
+      }
+
+      .guide {
+        padding: 10px 12px;
+        border-radius: 16px;
+      }
+
+      .guide-label {
+        margin-bottom: 5px;
+      }
+
+      .guide-text {
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .enter-btn {
+        min-height: 53px;
+        font-size: 19px;
+        border-radius: 15px;
+      }
+
+      .url-box,
+      .copy-btn {
+        min-height: 45px;
+      }
+
+      .bottom-note {
+        font-size: 10px;
+      }
     }
 
-    @media (max-height: 560px) {
-      html { font-size: 7.5px; }
-      .wrap { gap: 0.8rem; }
-      .brand-icon { width: 5rem; height: 5rem; font-size: 2.6rem; }
+    /* =========================================================
+       ارتفاع بسیار کم
+       ========================================================= */
+
+    @media (max-height: 540px) {
+
+      .page {
+        gap: 5px;
+      }
+
+      .brand {
+        display: none;
+      }
+
+      .guide {
+        padding: 9px 11px;
+      }
+
+      .guide-label {
+        font-size: 12px;
+        margin-bottom: 3px;
+      }
+
+      .guide-text {
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .enter-btn {
+        min-height: 49px;
+        font-size: 18px;
+      }
+
+      .url-box,
+      .copy-btn {
+        min-height: 42px;
+      }
+
+      .bottom-note {
+        display: none;
+      }
+    }
+
+    /* =========================================================
+       عرض بسیار کم
+       ========================================================= */
+
+    @media (max-width: 340px) {
+
+      body {
+        padding-left: 9px;
+        padding-right: 9px;
+      }
+
+      .page {
+        gap: 6px;
+      }
+
+      .guide-text {
+        font-size: 13px;
+      }
+
+      .url-section {
+        gap: 6px;
+      }
+
+      .copy-btn {
+        flex-basis: 78px;
+        font-size: 12px;
+      }
+
+      .url-box {
+        font-size: 12px;
+      }
+    }
+
+    /* =========================================================
+       کاهش حرکت برای دستگاه‌هایی که این گزینه را فعال کرده‌اند
+       ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="wrap">
+  <main class="page">
 
-    <!-- ===== برند ===== -->
-    <div class="brand">
-      <div class="brand-icon">🏆</div>
-      <h1 class="brand-title">
-        <span class="gold">Gold</span> Talent
-      </h1>
-    </div>
+    <!-- =========================
+         برند
+         ========================= -->
 
-    <!-- ===== کادر راهنما + آدرس ===== -->
-    <div class="hint-box">
+    <section class="brand" aria-label="گالری هنری روشا">
 
-      <div class="hint-title">
-        <span class="icon">⚠️</span>
-        <span>سایت در اینستاگرام باز نمی‌شود</span>
+      <div class="brand-mark" aria-hidden="true">
+        ✦
       </div>
 
-      <div class="hint-text">
-        آدرس زیر را کپی کنید و در مرورگر خود
-        (<strong>Chrome</strong> یا <strong>Safari</strong>) باز کنید:
+      <div class="brand-name">
+        گالری هنری <span>روشا</span>
       </div>
 
-      <div class="url-stack">
-        <div class="url-text" id="urlText">rosha-24.ir/x7q</div>
-
-        <button type="button" class="copy-btn" id="copyBtn">
-          📋 کپی آدرس
-        </button>
+      <div class="brand-sub">
+        راهنمای ورود به سایت
       </div>
 
-    </div>
+    </section>
 
-    <!-- ===== دکمه ورود ===== -->
-    <a href="#" class="enter-btn" id="enterBtn">
-      <span class="icon">🚪</span>
-      <span>ورود به سایت</span>
+
+    <!-- =========================
+         راهنمای ورود
+         ========================= -->
+
+    <section class="guide">
+
+      <div class="guide-label">
+        راهنمای ورود
+      </div>
+
+      <p class="guide-text">
+
+        برای شرکت در قرعه‌کشی، لطفاً برای ورود بدون
+        اختلال به سایت، ابتدا
+        <strong>فیلترشکن خود را خاموش کنید.</strong>
+
+        <br>
+
+        سپس مستقیماً وارد سایت شوید؛ یا در صورت نیاز،
+        آدرس سایت را کپی کرده و در مرورگر خود وارد نمایید.
+
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         ورود به سایت
+         ========================= -->
+
+    <a
+      href="https://www.rosha-24.ir/m3k"
+      class="enter-btn"
+      id="enterBtn"
+      aria-label="ورود به سایت گالری هنری روشا"
+    >
+
+      <span class="enter-icon">↗</span>
+
+      <span class="enter-label">
+        ورود به سایت
+      </span>
+
     </a>
 
-    <!-- ===== پاورقی ===== -->
-    <div class="footer-note">
-      <span class="lock">🔒</span>
-      <span>
-        سایت دارای نماد اعتماد الکترونیک است،
-        بهتر است فیلترشکن خود را خاموش کنید
-      </span>
+
+    <!-- =========================
+         آدرس + کپی
+         ========================= -->
+
+    <section
+      class="url-section"
+      aria-label="آدرس سایت"
+    >
+
+      <div
+        class="url-box"
+        id="urlText"
+      >
+        www.rosha-24.ir/m3k
+      </div>
+
+      <button
+        type="button"
+        class="copy-btn"
+        id="copyBtn"
+      >
+        کپی آدرس
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         توضیح پایین
+         ========================= -->
+
+    <div class="bottom-note">
+
+      در صورت باز نشدن مستقیم،
+      آدرس بالا را در <strong>Chrome</strong> یا
+      <strong>Safari</strong> وارد کنید.
+
     </div>
 
+  </main>
+
+
+  <!-- =========================
+       Toast
+       ========================= -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  >
+    آدرس کپی شد
   </div>
 
-  <!-- ===== Toast ===== -->
-  <div class="toast" id="toast">✅ آدرس کپی شد</div>
 
   <script>
-  (function () {
-    'use strict';
+    (function () {
 
-    var SITE_URL = 'https://rosha-24.ir/x7q';
-    var URL_TEXT = 'rosha-24.ir/x7q';
+      "use strict";
 
-    // ===== دکمه ورود =====
-    var enterBtn = document.getElementById('enterBtn');
-    var ua = navigator.userAgent || '';
-    var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-    var isAndroid = /android/i.test(ua);
+      /* =======================================================
+         تنظیمات اصلی
+         ======================================================= */
 
-    var targetUrl;
-    if (isIOS) {
-      targetUrl = 'x-safari-' + SITE_URL;
-    } else if (isAndroid) {
-      targetUrl = 'intent://rosha-24.ir/x7q#Intent;scheme=https;end';
-    } else {
-      targetUrl = SITE_URL;
-    }
-    enterBtn.setAttribute('href', targetUrl);
+      var SITE_URL = "https://www.rosha-24.ir/m3k";
+      var COPY_URL = "www.rosha-24.ir/m3k";
 
-    // ===== دکمه کپی =====
-    var copyBtn = document.getElementById('copyBtn');
-    var toast = document.getElementById('toast');
 
-    function showToast(msg) {
-      toast.textContent = msg;
-      toast.classList.add('show');
-      setTimeout(function () {
-        toast.classList.remove('show');
-      }, 1800);
-    }
+      /* =======================================================
+         عناصر
+         ======================================================= */
 
-    function fallbackCopy(text) {
-      var ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try {
-        document.execCommand('copy');
-        showToast('✅ آدرس کپی شد');
-      } catch (e) {
-        showToast('❌ خطا در کپی');
+      var enterBtn = document.getElementById("enterBtn");
+      var copyBtn = document.getElementById("copyBtn");
+      var urlText = document.getElementById("urlText");
+      var toast = document.getElementById("toast");
+
+
+      /* =======================================================
+         تشخیص سیستم
+         ======================================================= */
+
+      var ua = navigator.userAgent || "";
+
+      var isAndroid =
+        /Android/i.test(ua);
+
+      var isIOS =
+        /iPhone|iPad|iPod/i.test(ua) ||
+        (
+          navigator.platform === "MacIntel" &&
+          navigator.maxTouchPoints > 1
+        );
+
+
+      /* =======================================================
+         ساخت لینک ورود
+         
+         Android:
+         تلاش برای خارج شدن از WebView و باز کردن مرورگر
+
+         iOS:
+         تلاش مستقیم برای باز کردن Safari
+         
+         نکته:
+         Instagram ممکن است این رفتار را محدود کند.
+         ======================================================= */
+
+      function setEntryLink() {
+
+        if (isAndroid) {
+
+          var intentUrl =
+            "intent://www.rosha-24.ir/m3k" +
+            "#Intent;" +
+            "scheme=https;" +
+            "action=android.intent.action.VIEW;" +
+            "end";
+
+          enterBtn.href = intentUrl;
+
+        } else {
+
+          enterBtn.href = SITE_URL;
+
+        }
+
       }
-      document.body.removeChild(ta);
-    }
 
-    copyBtn.addEventListener('click', function () {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(URL_TEXT).then(function () {
-          showToast('✅ آدرس کپی شد');
-          copyBtn.classList.add('copied');
-          copyBtn.textContent = '✅ کپی شد';
-          setTimeout(function () {
-            copyBtn.classList.remove('copied');
-            copyBtn.textContent = '📋 کپی آدرس';
-          }, 1800);
-        }).catch(function () {
-          fallbackCopy(URL_TEXT);
-        });
-      } else {
-        fallbackCopy(URL_TEXT);
+      setEntryLink();
+
+
+      /* =======================================================
+         جلوگیری از رفتار عجیب کلیک در WebView
+         ======================================================= */
+
+      enterBtn.addEventListener(
+        "click",
+        function () {
+
+          /*
+           * روی Android ابتدا intent اجرا می‌شود.
+           * اگر WebView اجازه نداد، مرورگر معمولاً همان
+           * لینک HTTPS را باز می‌کند.
+           */
+
+          if (isAndroid) {
+
+            setTimeout(function () {
+
+              if (!document.hidden) {
+                window.location.href = SITE_URL;
+              }
+
+            }, 900);
+
+          }
+
+          /*
+           * روی iPhone لینک HTTPS عادی استفاده می‌شود.
+           * Safari را نمی‌توان از وب‌سایت با تضمین 100٪
+           * به‌صورت اجباری کنترل کرد.
+           */
+
+        },
+        false
+      );
+
+
+      /* =======================================================
+         Toast
+         ======================================================= */
+
+      var toastTimer = null;
+
+      function showToast(message) {
+
+        toast.textContent = message;
+
+        toast.classList.add("show");
+
+        clearTimeout(toastTimer);
+
+        toastTimer = setTimeout(
+          function () {
+            toast.classList.remove("show");
+          },
+          1800
+        );
+
       }
-    });
 
-  })();
+
+      /* =======================================================
+         کپی آدرس
+         ======================================================= */
+
+      function fallbackCopy(text) {
+
+        var textarea =
+          document.createElement("textarea");
+
+        textarea.value = text;
+
+        textarea.setAttribute(
+          "readonly",
+          ""
+        );
+
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+        textarea.style.top = "0";
+
+        document.body.appendChild(textarea);
+
+        textarea.focus();
+        textarea.select();
+
+        var success = false;
+
+        try {
+
+          success =
+            document.execCommand("copy");
+
+        } catch (e) {
+
+          success = false;
+
+        }
+
+        document.body.removeChild(textarea);
+
+        if (success) {
+
+          copySuccess();
+
+        } else {
+
+          showToast(
+            "لطفاً آدرس را لمس و کپی کنید"
+          );
+
+        }
+
+      }
+
+
+      function copySuccess() {
+
+        copyBtn.classList.add("copied");
+
+        copyBtn.textContent =
+          "✓ کپی شد";
+
+        showToast(
+          "✓ آدرس سایت کپی شد"
+        );
+
+        setTimeout(
+          function () {
+
+            copyBtn.classList.remove("copied");
+
+            copyBtn.textContent =
+              "کپی آدرس";
+
+          },
+          1800
+        );
+
+      }
+
+
+      copyBtn.addEventListener(
+        "click",
+        function () {
+
+          if (
+            navigator.clipboard &&
+            window.isSecureContext
+          ) {
+
+            navigator.clipboard
+              .writeText(COPY_URL)
+              .then(
+                function () {
+
+                  copySuccess();
+
+                }
+              )
+              .catch(
+                function () {
+
+                  fallbackCopy(COPY_URL);
+
+                }
+              );
+
+          } else {
+
+            fallbackCopy(COPY_URL);
+
+          }
+
+        },
+        false
+      );
+
+
+      /* =======================================================
+         جلوگیری از زوم و gestureهای ناخواسته
+         ======================================================= */
+
+      document.addEventListener(
+        "gesturestart",
+        function (event) {
+          event.preventDefault();
+        },
+        { passive: false }
+      );
+
+      document.addEventListener(
+        "gesturechange",
+        function (event) {
+          event.preventDefault();
+        },
+        { passive: false }
+      );
+
+      document.addEventListener(
+        "gestureend",
+        function (event) {
+          event.preventDefault();
+        },
+        { passive: false }
+      );
+
+
+      /* =======================================================
+         جلوگیری از کشیدن صفحه
+         ======================================================= */
+
+      document.addEventListener(
+        "touchmove",
+        function (event) {
+
+          event.preventDefault();
+
+        },
+        { passive: false }
+      );
+
+
+      /* =======================================================
+         مدیریت تغییر ارتفاع مرورگر موبایل
+         ======================================================= */
+
+      function updateViewportHeight() {
+
+        var height =
+          window.visualViewport
+            ? window.visualViewport.height
+            : window.innerHeight;
+
+        document.documentElement.style.setProperty(
+          "--real-vh",
+          height + "px"
+        );
+
+      }
+
+
+      updateViewportHeight();
+
+      window.addEventListener(
+        "resize",
+        updateViewportHeight,
+        { passive: true }
+      );
+
+      if (window.visualViewport) {
+
+        window.visualViewport.addEventListener(
+          "resize",
+          updateViewportHeight,
+          { passive: true }
+        );
+
+      }
+
+
+    })();
   </script>
 
 </body>
